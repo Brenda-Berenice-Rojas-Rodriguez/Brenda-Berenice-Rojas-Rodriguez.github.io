@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -41,20 +41,28 @@ body {
     transition: color 0.3s;
 }
 
+header {
+    margin-top: 1.5rem;    
+    padding: 2rem 1rem;
+    text-align: justify;
+    border-bottom: 0px solid #e9ecef;
+    font-size: large;
+}
+
 .navbar a:hover {
     color: #ff69b4;
 }
 
 .content {
     padding: 100px 20px 50px;
-    min-height: 100vh;
+    min-height: 60vh;
     border-bottom: 1px solid #333;
 }
 
 .content .title {
     color: #ff69b4;
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     text-align: center;
     position: relative;
 }
@@ -101,6 +109,7 @@ body {
     text-decoration: none;
     border-radius: 25px;
     margin-top: 20px;
+    margin-bottom: 0px;
     transition: background 0.3s;
 }
 
@@ -110,7 +119,8 @@ body {
 
 .box-container2 {
     max-width: 600px;
-    margin: 40px auto;
+    margin: 20px auto;
+    margin-bottom: 10px;
 }
 
 .box-container2 .box {
