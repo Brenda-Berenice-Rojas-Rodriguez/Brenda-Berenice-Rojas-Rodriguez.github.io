@@ -215,6 +215,11 @@ header {
   text-decoration: none;
   transition: color 0.3s;
 }
+.perfil a:link,
+.perfil a:visited {
+  color: #ff69b4;
+  text-decoration: none;
+}
 
 .perfil a:hover {
   color: #fff;
