@@ -180,18 +180,15 @@ header {
     .box-container {
         grid-template-columns: 1fr;
     }
-/* Contenedor general del cuadro */
-
+/* Contenedor general */
 .contenedor-perfiles {
   background: #1a1a1a;
   border: 2px solid #ff69b4;
   border-radius: 15px;
   padding: 30px;
-  margin-top: 30px;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
+  margin: 40px auto;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
 }
 
 /* Lista de perfiles en 2 columnas */
@@ -201,11 +198,11 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
-  padding-left: 0;
-  margin-bottom: 20px;
+  padding: 0;
+  margin: 0 auto;
 }
 
-/* Cada ítem de perfil */
+/* Cada ítem */
 .perfil-lista li {
   counter-increment: perfil;
   background: #1a1a1a;
@@ -216,12 +213,10 @@ header {
   transition: transform 0.3s;
 }
 
-/* Hover para levantar ligeramente */
 .perfil-lista li:hover {
   transform: translateY(-5px);
 }
 
-/* Numeración automática */
 .perfil-lista li::before {
   content: counter(perfil) ". ";
   color: #ff69b4;
@@ -232,7 +227,6 @@ header {
   left: 20px;
 }
 
-/* Contenido del perfil */
 .perfil .nombre {
   margin-left: 35px;
   color: #ff69b4;
@@ -255,7 +249,7 @@ header {
   color: #fff;
 }
 
-/* Paginación centrada con botones rosados */
+/* Botones de paginación */
 .paginacion {
   text-align: center;
   margin-top: 20px;
@@ -283,3 +277,4 @@ header {
   color: #ff69b4;
   border: 1px solid #ff69b4;
 }
+
