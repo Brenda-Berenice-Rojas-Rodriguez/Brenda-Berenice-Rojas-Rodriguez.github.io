@@ -180,43 +180,47 @@ header {
     .box-container {
         grid-template-columns: 1fr;
     }
-/* Contenedor general */
+
+/* CONTENEDOR GENERAL DEL MENÚ */
 .contenedor-perfiles {
-  background: #1a1a1a;
+  background-color: #1a1a1a;
   border: 2px solid #ff69b4;
   border-radius: 15px;
   padding: 30px;
-  margin: 40px auto;
-  max-width: 900px;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
+  margin: 60px auto 40px;
+  max-width: 1000px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.15);
 }
 
-/* Lista de perfiles en 2 columnas */
+/* LISTA DE PERFILES EN 2 COLUMNAS */
 .perfil-lista {
   counter-reset: perfil;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 30px;
   padding: 0;
   margin: 0 auto;
 }
 
-/* Cada ítem */
+/* CADA PERFIL */
 .perfil-lista li {
   counter-increment: perfil;
-  background: #1a1a1a;
+  background-color: #000;
   border: 2px solid #ff69b4;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 20px 25px;
+  border-radius: 12px;
   position: relative;
   transition: transform 0.3s;
+  color: #fff;
 }
 
 .perfil-lista li:hover {
   transform: translateY(-5px);
+  border-color: #ff1493;
 }
 
+/* NUMERACIÓN AUTOMÁTICA */
 .perfil-lista li::before {
   content: counter(perfil) ". ";
   color: #ff69b4;
@@ -227,54 +231,47 @@ header {
   left: 20px;
 }
 
+/* NOMBRE DEL PERFIL */
 .perfil .nombre {
   margin-left: 35px;
-  color: #ff69b4;
   font-weight: bold;
   font-size: 1.1em;
+  color: #ff69b4;
   margin-bottom: 10px;
 }
 
-.perfil a:link,
-.perfil a:visited {
+/* ENLACES DEL PERFIL */
+.perfil a {
+  display: inline-block;
+  margin-left: 35px;
+  margin-top: 6px;
   color: #ff69b4;
   text-decoration: none;
-  margin-left: 35px;
-  display: inline-block;
-  margin-top: 5px;
+  transition: color 0.3s;
 }
 
-.perfil a:hover,
-.perfil a:active {
+.perfil a:hover {
   color: #fff;
 }
 
-/* Botones de paginación */
+/* PAGINACIÓN */
 .paginacion {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .paginacion button {
   background: #ff69b4;
   color: #000;
-  border: none;
-  border-radius: 6px;
-  margin: 5px;
-  padding: 8px 15px;
-  cursor: pointer;
   font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 
 .paginacion button:hover {
   background: #ff1493;
-  color: #fff;
-}
-
-.paginacion button.active {
-  background: #fff;
-  color: #ff69b4;
-  border: 1px solid #ff69b4;
-}
-
+  c
