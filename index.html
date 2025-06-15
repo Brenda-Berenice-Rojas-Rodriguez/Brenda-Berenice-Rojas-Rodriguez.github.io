@@ -53,65 +53,6 @@
 
         
 
-    
-
-            
-  const perfiles = [
-    { nombre: "Alicia Ramos", enlace: "https://aliciaramos.com" },
-    { nombre: "José Vela", enlace: "https://josevela.net" },
-    { nombre: "Lucía Torres", enlace: "https://lucia-torres.com" },
-    { nombre: "Carlos Quispe", enlace: "https://carlosq.com" },
-    { nombre: "María Díaz", enlace: "https://mariadiaz.com" },
-    { nombre: "Eduardo Ríos", enlace: "https://eduardorios.net" },
-    { nombre: "Ana Pérez", enlace: "https://anaperez.com" },
-    { nombre: "Luis Salazar", enlace: "https://luissalazar.com" },
-    { nombre: "Valeria Mendoza", enlace: "https://valeriamendoza.com" },
-    { nombre: "Diego Núñez", enlace: "https://diegonunez.com" },
-    
-  ];
-
-  const perfilesPorPagina = 6;
-  let paginaActual = 1;
-
-  function mostrarPerfiles(pagina) {
-    const inicio = (pagina - 1) * perfilesPorPagina;
-    const fin = inicio + perfilesPorPagina;
-    const contenedor = document.getElementById('perfiles');
-    contenedor.innerHTML = '';
-
-    perfiles.slice(inicio, fin).forEach(perfil => {
-      const div = document.createElement('div');
-      div.className = 'perfil';
-      div.innerHTML = `<a href="${perfil.enlace}" target="_blank">${perfil.nombre}</a>`;
-      contenedor.appendChild(div);
-    });
-
-    mostrarPaginacion(pagina);
-  }
-
-  function mostrarPaginacion(pagina) {
-    const totalPaginas = Math.ceil(perfiles.length / perfilesPorPagina);
-    const contenedor = document.getElementById('paginacion');
-    contenedor.innerHTML = '';
-
-    for (let i = 1; i <= totalPaginas; i++) {
-      const btn = document.createElement('button');
-      btn.textContent = i;
-      btn.className = (i === pagina) ? 'active' : '';
-      btn.onclick = () => {
-        paginaActual = i;
-        mostrarPerfiles(i);
-      };
-      contenedor.appendChild(btn);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    mostrarPerfiles(paginaActual);
-  });
-</script>
-
-
 
         </div>
 
