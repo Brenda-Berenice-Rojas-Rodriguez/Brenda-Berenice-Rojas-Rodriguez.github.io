@@ -1,157 +1,239 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="NGQwpQECliXZeIO037dPK_1S91X_6aoJIUVH130Fp68" />
-    <link rel="stylesheet" href="style.css">
-    <title>Portafolio Personal</title>
-</head>
-<body>
+/* style.css optimizado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
 
-    <header class="head">
-        <div class="logo">
-            <a href="#">LOGO</a>
-        </div>
-        <nav class="navbar" aria-label="Navegación principal">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre Mí</a>
-            <a href="#curriculum">Currículum</a>
-            <a href="#contenido">Mi Contenido</a>
-            <a href="#redes">Redes Sociales</a>
-        </nav>
-    </header>
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
-    <main>
-        <section id="inicio" class="content header">
-            <h2 class="title">Inicio</h2>
-            <p>
-                Bienvenidos a mi espacio personal. Soy una estudiante universitaria del rubro de administración de negocios cuya aspiración es especializarse en el rubro del comercio exterior. Pero también poseo aptitudes en otros rubros que se mencionarán en el apartado correpondiente.
-            </p>
-            <p>
-                Este espacio tiene el propósito de compartir quién soy, mis intereses y las experiencias que reflejan mi crecimiento personal y profesional. A través de este sitio podrás conocer un poco más de mi trayectoria, habilidades, proyectos y objetivos, así como el acceso a mi Currículum Vitae actualizado con cada cambio en mi experiencia laboral.
-            </p>
-            <p>
-                Espero que este espacio te resulte interesante y te invite a explorar cada una de sus secciones.
-            </p>
-            <a href="#sobre-mi" class="btn">Más</a>
-        </section>
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
 
-        <section id="sobre-mi" class="content sau">
-            <h2 class="title">Universidad</h2>
-            <p>
-                Estoy estudiando actualmente en la UCSP en la ciudad de Arequipa, en la carrera de administración de negocios
-            </p>
-            <a href="https://ucsp.edu.pe/carreras/administracion-negocios/" class="btn" target="_blank">Más</a>
-        </section>
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        <section class="content">
-            <h2 class="title">Compañeros de Clase</h2>
-            <div id="perfiles" class="box-container"></div>
-            <div class="pagination" id="pagination"></div>
-        </section>
+a:hover {
+    color: #ff69b4;
+}
 
-        <section id="curriculum" class="content price">
-            <article class="contain">
-                <h2 class="title">Currículum</h2>
-                <p>
-                    Se puede visualizar mi experiencia en el enlace a continuación, junto a muchas habilidades que he desarrollado y perfeccionado al unirme al mundo laboral. También se complementa esta información con lo detallado en mi perfil de LinkedIn que se encuentra al final de este sitio.
-                </p>
-                <a href="https://www.canva.com/design/DAGoOdCRPiU/N6Itph4xpu0uNS_whsWQgg/edit?utm_content=DAGoOdCRPiU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn" target="_blank">Ver Detalle</a>
-            </article>
-        </section>
+.head {
+    background-color: #000;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff69b4;
+}
 
-        <section id="contenido" class="content about">
-            <h2 class="title">Mi Contenido</h2>
-            <p>
-                Aquí encontrarás contenido relacionado a la literatura, sean reseñas o libros escritos. Este es uno de mis pasatiempos favoritos, al cual le suelo dar más importancia y seriedad.
-            </p>
-            <div class="box-container2">
-                <div class="box">
-                    <ul>
-                        <li><a href="https://berenice-rodriguez-books.blogspot.com/" target="_blank">Blogger</a> - Aquí se puede encontrar el historial de libros que ya he leído y a los cuales he podido dar reseña, también se habla de mis historias en el perfil a continuación.</li>
-                        <li><a href="https://www.wattpad.com/user/Berenice_Rodriguez" target="_blank">Wattpad</a> - Aquí podrás encontrar historias, ya sean cuentos o novelas escritas por mí. Mi aspiración es poder lograr publicar alguna de ellas bajo un sello editorial.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+.logo a {
+    color: #ff69b4;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-        <section id="redes" class="content contact">
-            <h2 class="title">Redes Sociales</h2>
-            <div class="footer-section">
-                <div class="f-enlaces">
-                    <a href="https://www.linkedin.com/in/brenda-berenice-rojas-rodr%C3%ADguez-797b07276/" target="_blank">LinkedIn</a> - Perfil de trabajo
-                    <a href="https://www.instagram.com/bere_ro7/" target="_blank">Instagram</a> - Contacto directo
-                    <a href="https://t.me/Nicerod07/" target="_blank">Telegram</a> - Contacto personal
-                </div>
-            </div>
-        </section>
-    </main>
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+    justify-content: center;
+}
 
-    <script>
-        const perfiles = [
-            { nombre: "Ernesto Cuadros", linkedin: "https://www.linkedin.com/in/ecuadrosv/", web: "" },
-            { nombre: "Josue Montenegro Salazar", linkedin: "", web: "https://josuemontenegro.com/" },
-            { nombre: "Jesús Franklin Hilarión Gallegos", linkedin: "https://www.linkedin.com/in/franklin-hilari%C3%B3n/", web: "https://franklinhilarion.github.io/franklinhilarion/" },
-            { nombre: "María Fernanda Apaza Meza", linkedin: "", web: "https://mariafernandaapazameza.github.io/Maria-Fernanda-Apaza-Meza/" },
-            { nombre: "María Alesandra Quinto Gonza", linkedin: "https://pe.linkedin.com/in/mar%C3%ADa-a-quinto-g-7920b3358", web: "https://mariaquintog.github.io/" },
-            { nombre: "Joaquin Carlos Huamani Arroyo", linkedin: "https://www.linkedin.com/in/joaquin-carlos-huamani-arroyo-409088358/", web: "https://joaquin200712.github.io/" },
-            { nombre: "Krislet Yahaira Juarez Arce", linkedin: "", web: "https://krisletyahairajuarezarce.github.io/Krislet-Yahaira-Juarez-Arce/" },
-            { nombre: "Alvaro Enrique Apaza Luque", linkedin: "", web: "https://alvaroenriqueapazaluque.github.io/AlvaroApazaLuque.github.io/" },
-            { nombre: "Carlos Josué Quispe Huscca", linkedin: "", web: "https://jermame15.github.io/carlos_josue_quispe.github.com/" },
-            { nombre: "Melany Paola Delgado Cama", linkedin: "", web: "https://melanydelca.github.io/" },
-            { nombre: "Fabian Rodrigo Cayo Calcina", linkedin: "", web: "https://fabianrodrigocayocalcina.github.io/" },
-            { nombre: "Leonardo Guillermo Cruz Mamani", linkedin: "https://www.linkedin.com/in/leonardo-cruz-mamani-a6888418b/", web: "https://leonardocruzmamani28.github.io/" },
-            { nombre: "Pedro Fabian Zahir Flores Gutierrez", linkedin: "https://www.linkedin.com/in/pedro-f-z-flores-guti%C3%A9rrez-415753365/", web: "https://pedro191102.github.io/Pedro-Fabian-Zahir-Flores-Gutierrez/" },
-            { nombre: "Leyla Diney Rosas Ccama", linkedin: "https://www.linkedin.com/in/leyla-diney-rosas-ccama-872415369", web: "https://leylarosas.github.io/Leyla-Rosas-P-ginaWeb/" },
-            { nombre: "Gustavo Jesus Montoya Durand", linkedin: "", web: "https://gustavojesusmontoyadurand.github.io/Gustavo-Jesus-Montoya-Durand/" },
-            { nombre: "Brad Caleb López Parizaca", linkedin: "", web: "https://caleb19-666.github.io/pagina-shrek/" },
-            { nombre: "Gabriel Maura Martinez", linkedin: "", web: "https://gabomaura.neocities.org/" },
-            { nombre: "Arianna Aylin Arenas Zevallos", linkedin: "https://linkedin.com/in/arianna-aylin-arenas-zevallos-15a203357", web: "https://ariannaarenas.github.io/ariannaaylinarenaszevallos/" },
-            { nombre: "Maria Jose Montoya Cardenas", linkedin: "", web: "https://maria-035.github.io/maria.montoya.cardenas-/" },
-            { nombre: "Joseph Christian Condori Ramos", linkedin: "https://www.linkedin.com/in/joseph-christian-condori-ramos-236645210", web: "" }
-        ];
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        const perfilesPorPagina = 12;
-        let paginaActual = 1;
-        const totalPaginas = Math.ceil(perfiles.length / perfilesPorPagina);
+.navbar a:hover {
+    color: #ff69b4;
+}
 
-        function mostrarPerfiles(pagina) {
-            const contenedor = document.getElementById("perfiles");
-            contenedor.innerHTML = "";
-            const inicio = (pagina - 1) * perfilesPorPagina;
-            const fin = inicio + perfilesPorPagina;
-            const paginaPerfiles = perfiles.slice(inicio, fin);
+header {
+    margin-top: 1.5rem;
+    padding: 2rem 1rem;
+    text-align: justify;
+    font-size: 1.1rem;
+}
 
-            paginaPerfiles.forEach(perfil => {
-                const box = document.createElement("div");
-                box.className = "box";
-                box.innerHTML = `
-                    <h3>${perfil.nombre}</h3>
-                    ${perfil.linkedin ? `<p><a href="${perfil.linkedin}" target="_blank">LinkedIn</a></p>` : ""}
-                    ${perfil.web ? `<p><a href="${perfil.web}" target="_blank">Página Web</a></p>` : ""}
-                `;
-                contenedor.appendChild(box);
-            });
-        }
+.content {
+    padding: 100px 20px 50px;
+    min-height: 60vh;
+    border-bottom: 1px solid #333;
+}
 
-        function crearPaginacion() {
-            const paginacion = document.getElementById("pagination");
-            paginacion.innerHTML = "";
-            for (let i = 1; i <= totalPaginas; i++) {
-                const btn = document.createElement("button");
-                btn.textContent = i;
-                btn.onclick = () => {
-                    paginaActual = i;
-                    mostrarPerfiles(paginaActual);
-                };
-                paginacion.appendChild(btn);
-            }
-        }
+.content .title,
+.content .tittle {
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
 
-        mostrarPerfiles(paginaActual);
-        crearPaginacion();
-    </script>
-</body>
-</html>
+.content .title::after,
+.content .tittle::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ff69b4;
+    margin: 10px auto;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.box {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #ff69b4;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #ff69b4;
+}
+
+.box h3 {
+    color: #ff69b4;
+    margin: 15px 0;
+    font-size: 1.25em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff69b4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #ff1493;
+    transform: scale(1.05);
+}
+
+.box-container2 {
+    max-width: 700px;
+    margin: 20px auto;
+    margin-bottom: 10px;
+}
+
+.box-container2 .box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.box-container2 li {
+    margin: 15px 0;
+    list-style: none;
+}
+
+.box-container2 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.box-container2 a:hover {
+    color: #ff69b4;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.f-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.f-enlaces a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.f-enlaces a:hover {
+    color: #ff69b4;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pagination button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        padding-top: 150px;
+    }
+
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
