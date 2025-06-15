@@ -6,17 +6,66 @@
     <meta http-equiv="X.UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
     <title>Document</title>
+    <style>
+        .profile-menu {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .profiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .profile-box {
+            border: 2px solid #ff69b4;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+
+        .profile-box h3 {
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .profile-box a {
+            color: #ff69b4;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .pagination button {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #ff1493;
+        }
+    </style>
 </head>
 <body>
 
     <div class="head">
-
         <div class="logo">
             <a href="#">LOGO</a>
         </div>
-
         <nav class="navbar">
             <a href="#">Inicio</a>
             <a href="#">Sobre Mi</a>
@@ -24,75 +73,108 @@
             <a href="#">Mi Contenido</a>
             <a href="#">Redes Sociales</a>
         </nav>
-    
-    </div> 
-
+    </div>
 
     <header class="content header">
         <h2 class="tittle">Inicio</h2>
         <p>
             Bienvenidos a mi espacio personal. Soy una estudiante universitaria del rubro de administración de
             negocios cuya aspiración es especializarse en el rubro del comercio exterior. Pero también poseo aptitudes en otros rubros que se mencionarán en el apartado correpondiente
-            Este espacio tiene el propósito de compartir quién soy, mis intereses y las experiencias que reflejan mi crecimiento personal y profesional.
-
-        <p>A través de este sitio podrás conocer un poco más de mi trayectoria, habilidades, proyectos y objetivos, asi como el acceso a mi Currículum Vitae actualizado con cada cambio en mi experiencia laboral.
         </p>
+        <p>A través de este sitio podrás conocer un poco más de mi trayectoria, habilidades, proyectos y objetivos, así como el acceso a mi Currículum Vitae actualizado con cada cambio en mi experiencia laboral.</p>
         <p>Espero que este espacio te resulte interesante y te invite a explorar cada una de sus secciones.</p>
         <a href="#" class="btn">Mas</a>
     </header>
 
-
     <section class="content sau">
         <h2 class="tittle">Universidad</h2>
-        <p>
-             Estoy estudiando actualmente en la UCSP en la ciudad de Arequipa, en la carrera de administración de negocios</p>
-                    
-                <a href="https://ucsp.edu.pe/carreras/administracion-negocios/" class="btn">Más</a>
-                
+        <p>Estoy estudiando actualmente en la UCSP en la ciudad de Arequipa, en la carrera de administración de negocios</p>
+        <a href="https://ucsp.edu.pe/carreras/administracion-negocios/" class="btn">Más</a>
 
+        <!-- Menu de perfiles -->
+        <div class="profile-menu">
+            <h2 class="tittle">Compañeros de Clase</h2>
+            <div id="profiles" class="profiles"></div>
+            <div class="pagination" id="pagination"></div>
+        </div>
     </section>
 
     <section class="content price">
-
         <article class="contain">
-
             <h2 class="title">Currículum</h2>
-            <p>Se puede visualizar mi experiencia en el enlace a continuación, junto a muchas habilidades que he desarrollado y perfeccionado al unirme al mundo laboral. También se complementa ésta informacion con lo detallado en mi perfil de LinkedIn que se encuentra al final de este sitio.
-            </p>
+            <p>Se puede visualizar mi experiencia en el enlace a continuación, junto a muchas habilidades que he desarrollado y perfeccionado al unirme al mundo laboral. También se complementa ésta informacion con lo detallado en mi perfil de LinkedIn que se encuentra al final de este sitio.</p>
             <a href="https://www.canva.com/design/DAGoOdCRPiU/N6Itph4xpu0uNS_whsWQgg/edit?utm_content=DAGoOdCRPiU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn">Ver Detalle</a>
-
         </article>
-
     </section>
 
     <section class="content about">
         <h2 class="tittle">Mi Contenido</h2>
-        <p>Aqui encontrarás contenido relacionado a la literatura, sean reseñas o libros escritos. Éste es uno de mis pasatiempos favoritos, al cual le suelo dar mas importancia y seriedad.
-        </p>
+        <p>Aqui encontrarás contenido relacionado a la literatura, sean reseñas o libros escritos. Éste es uno de mis pasatiempos favoritos, al cual le suelo dar mas importancia y seriedad.</p>
         <div class="box-container2">
-
             <div class="box">
                 <li><a href="https://berenice-rodriguez-books.blogspot.com/" target="_blank">Blogger</a> - Aquí se puede encontrar el historial de libros que ya he leido y a los cuales he podido dar reseña, tambien se habla de mis historias en el perfil a continuación.</li>
                 <li><a href="https://www.wattpad.com/user/Berenice_Rodriguez" target="_blank">Wattpad</a> - Aquí podrás encontrar historias, ya sean cuentos o novelas escritas por mi. Mi aspiración en poder lograr publicar alguna de ellas bajo un sello editorial</li>
             </div>
         </div>
-
     </section>
 
     <section class="content contact">
         <h2 class="tittle">Redes Sociales</h2>
-
         <div class="footer-section">
-
             <div class="f-enlaces">
-             <a href="https://www.linkedin.com/in/brenda-berenice-rojas-rodr%C3%ADguez-797b07276/" target="_blank">LinkedIn</a> - Perfil de trabajo</li>
-             <a href="https://www.instagram.com/bere_ro7/" target="_blank">Instagram</a> - Contacto directo</li>
-             <a href="https://t.me/Nicerod07/" target="_blank">Telegram</a> - Contacto personal</li>
+                <a href="https://www.linkedin.com/in/brenda-berenice-rojas-rodr%C3%ADguez-797b07276/" target="_blank">LinkedIn</a> - Perfil de trabajo</li>
+                <a href="https://www.instagram.com/bere_ro7/" target="_blank">Instagram</a> - Contacto directo</li>
+                <a href="https://t.me/Nicerod07/" target="_blank">Telegram</a> - Contacto personal</li>
             </div>
         </div>
-
     </section>
 
+    <script>
+        const profiles = [];
+        for (let i = 1; i <= 96; i++) {
+            profiles.push({
+                nombre: `Compañero ${i}`,
+                web: `https://ejemplo.com/comp${i}`,
+                linkedin: `https://linkedin.com/in/comp${i}`
+            });
+        }
 
+        const profilesPerPage = 12;
+        let currentPage = 1;
+
+        function renderProfiles() {
+            const container = document.getElementById('profiles');
+            const pagination = document.getElementById('pagination');
+            container.innerHTML = '';
+            pagination.innerHTML = '';
+
+            const start = (currentPage - 1) * profilesPerPage;
+            const end = start + profilesPerPage;
+            const paginatedProfiles = profiles.slice(start, end);
+
+            paginatedProfiles.forEach(profile => {
+                const div = document.createElement('div');
+                div.className = 'profile-box';
+                div.innerHTML = `
+                    <h3>${profile.nombre}</h3>
+                    <a href="${profile.web}" target="_blank">Página Web</a>
+                    <a href="${profile.linkedin}" target="_blank">LinkedIn</a>
+                `;
+                container.appendChild(div);
+            });
+
+            for (let i = 1; i <= 8; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                btn.onclick = () => {
+                    currentPage = i;
+                    renderProfiles();
+                };
+                pagination.appendChild(btn);
+            }
+        }
+
+        renderProfiles();
+    </script>
 </body>
 </html>
