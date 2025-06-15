@@ -102,65 +102,36 @@
         </div>
 
     </section>
-<script>
-  const perfiles = [
-    { nombre: "Compañero 1", web: "https://ejemplo1.com", linkedin: "https://linkedin.com/in/ejemplo1" },
-    { nombre: "Compañero 2", web: "https://ejemplo2.com", linkedin: "https://linkedin.com/in/ejemplo2" },
-    { nombre: "Compañero 3", web: "https://ejemplo3.com", linkedin: "https://linkedin.com/in/ejemplo3" },
-    { nombre: "Compañero 4", web: "https://ejemplo4.com", linkedin: "https://linkedin.com/in/ejemplo4" },
-    { nombre: "Compañero 5", web: "https://ejemplo5.com", linkedin: "https://linkedin.com/in/ejemplo5" },
-    { nombre: "Compañero 6", web: "https://ejemplo6.com", linkedin: "https://linkedin.com/in/ejemplo6" },
-    { nombre: "Compañero 7", web: "https://ejemplo7.com", linkedin: "https://linkedin.com/in/ejemplo7" },
-    { nombre: "Compañero 8", web: "https://ejemplo8.com", linkedin: "https://linkedin.com/in/ejemplo8" },
-    { nombre: "Compañero 9", web: "https://ejemplo9.com", linkedin: "https://linkedin.com/in/ejemplo9" },
-    { nombre: "Compañero 10", web: "https://ejemplo10.com", linkedin: "https://linkedin.com/in/ejemplo10" },
-    // Agrega hasta 60 perfiles aquí...
-  ];
+<div class="contenedor-perfiles">
+  <h2 class="content title">Menú de Perfiles</h2>
+  <ul class="perfil-lista">
+    <li class="perfil">
+      <div class="nombre">Compañero 1</div>
+      <a href="#" target="_blank">🌐 Página Web</a>
+      <a href="#" target="_blank">🔗 LinkedIn</a>
+    </li>
+    <li class="perfil">
+      <div class="nombre">Compañero 2</div>
+      <a href="#" target="_blank">🌐 Página Web</a>
+      <a href="#" target="_blank">🔗 LinkedIn</a>
+    </li>
+    <!-- Repite hasta 6 por página -->
+  </ul>
 
-  const perfilesPorPagina = 6;
-  let paginaActual = 1;
-  const totalPaginas = Math.ceil(perfiles.length / perfilesPorPagina);
+  <div class="paginacion">
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>10</button>
+  </div>
+</div>
 
-  function mostrarPerfiles(pagina) {
-    const inicio = (pagina - 1) * perfilesPorPagina;
-    const fin = inicio + perfilesPorPagina;
-    const contenedor = document.getElementById('perfiles');
-    contenedor.innerHTML = '';
-
-    perfiles.slice(inicio, fin).forEach(perfil => {
-      const li = document.createElement('li');
-      li.innerHTML = `
-        <div class="perfil">
-          <div class="nombre">${perfil.nombre}</div>
-          <a href="${perfil.web}" target="_blank">🌐 Página Web</a>
-          <a href="${perfil.linkedin}" target="_blank">🔗 LinkedIn</a>
-        </div>
-      `;
-      contenedor.appendChild(li);
-    });
-
-    actualizarPaginacion(pagina);
-  }
-
-  function actualizarPaginacion(paginaSeleccionada) {
-    const paginacion = document.getElementById('paginacion');
-    paginacion.innerHTML = '';
-
-    for (let i = 1; i <= totalPaginas; i++) {
-      const btn = document.createElement('button');
-      btn.textContent = i;
-      if (i === paginaSeleccionada) btn.classList.add('active');
-      btn.addEventListener('click', () => {
-        paginaActual = i;
-        mostrarPerfiles(paginaActual);
-      });
-      paginacion.appendChild(btn);
-    }
-  }
-
-  // Inicializar
-  mostrarPerfiles(paginaActual);
-</script>
 
 </body>
 </html>
