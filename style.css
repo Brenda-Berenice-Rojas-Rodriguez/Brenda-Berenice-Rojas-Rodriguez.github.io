@@ -64,11 +64,12 @@ a:hover {
 }
 
 header {
-    margin-top: 1.5rem;
-    padding: 2rem 1rem;
-    text-align: justify;
-    font-size: 1.1rem;
+  margin-top: 0;
+  padding: 140px 1rem 2rem;
+  text-align: justify;
+  font-size: 1.1rem;
 }
+
 
 .content {
     padding: 100px 20px 50px;
