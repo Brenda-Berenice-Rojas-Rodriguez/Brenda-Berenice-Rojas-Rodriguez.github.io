@@ -181,6 +181,7 @@ header {
         grid-template-columns: 1fr;
     }
 /* Contenedor general del cuadro */
+
 .contenedor-perfiles {
   background: #1a1a1a;
   border: 2px solid #ff69b4;
