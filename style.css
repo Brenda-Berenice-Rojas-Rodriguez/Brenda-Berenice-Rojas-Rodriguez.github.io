@@ -180,7 +180,7 @@ header {
     .box-container {
         grid-template-columns: 1fr;
     }
-}
+/* Contenedor general del cuadro */
 .contenedor-perfiles {
   background: #1a1a1a;
   border: 2px solid #ff69b4;
@@ -188,18 +188,23 @@ header {
   padding: 30px;
   margin-top: 30px;
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Lista de perfiles en 2 columnas */
 .perfil-lista {
   counter-reset: perfil;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
   padding-left: 0;
   margin-bottom: 20px;
 }
 
+/* Cada ítem de perfil */
 .perfil-lista li {
   counter-increment: perfil;
   background: #1a1a1a;
@@ -210,10 +215,12 @@ header {
   transition: transform 0.3s;
 }
 
+/* Hover para levantar ligeramente */
 .perfil-lista li:hover {
   transform: translateY(-5px);
 }
 
+/* Numeración automática */
 .perfil-lista li::before {
   content: counter(perfil) ". ";
   color: #ff69b4;
@@ -224,6 +231,7 @@ header {
   left: 20px;
 }
 
+/* Contenido del perfil */
 .perfil .nombre {
   margin-left: 35px;
   color: #ff69b4;
@@ -237,9 +245,40 @@ header {
   color: #ff69b4;
   text-decoration: none;
   margin-left: 35px;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .perfil a:hover,
 .perfil a:active {
   color: #fff;
+}
+
+/* Paginación centrada con botones rosados */
+.paginacion {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  background: #ff69b4;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  margin: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.paginacion button:hover {
+  background: #ff1493;
+  color: #fff;
+}
+
+.paginacion button.active {
+  background: #fff;
+  color: #ff69b4;
+  border: 1px solid #ff69b4;
 }
