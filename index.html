@@ -1,186 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="google-site-verification" content="NGQwpQECliXZeIO037dPK_1S91X_6aoJIUVH130Fp68" />
     <meta charset="UTF-8">
-    <meta http-equiv="X.UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="NGQwpQECliXZeIO037dPK_1S91X_6aoJIUVH130Fp68" />
     <link rel="stylesheet" href="style.css">
-    <title>Brenda Berenice Rojas Rodriguez</title>
-    <style>
-        .profile-menu {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .profiles {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .profile-box {
-            border: 2px solid #ff69b4;
-            padding: 20px;
-            background: #1a1a1a;
-            border-radius: 10px;
-        }
-
-        .profile-box h3 {
-            color: #ff69b4;
-            margin-bottom: 10px;
-        }
-
-        .profile-box a {
-            color: #ff69b4;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 10px;
-        }
-
-        .pagination button {
-            background-color: #ff69b4;
-            border: none;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .pagination button:hover {
-            background-color: #ff1493;
-        }
-    </style>
+    <title>Portafolio Personal</title>
 </head>
 <body>
 
-    <div class="head">
+    <header class="head">
         <div class="logo">
-            <a href="#">ICC</a>
+            <a href="#">LOGO</a>
         </div>
-        <nav class="navbar">
-            <a href="#">Inicio</a>
-            <a href="#">Universidad</a>
-            <a href="#">Currículum</a>
-            <a href="#">Mi Contenido</a>
-            <a href="#">Redes Sociales</a>
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#curriculum">Currículum</a>
+            <a href="#contenido">Mi Contenido</a>
+            <a href="#redes">Redes Sociales</a>
         </nav>
-    </div>
-
-    <header class="content header">
-        <h2 class="tittle">Inicio</h2>
-        <p>
-            Bienvenidos a mi espacio personal. Mi nombre es Brenda Berenice Rojas Rodriguez, soy una estudiante universitaria del rubro de administración de
-            negocios cuya aspiración es especializarse en el rubro del comercio exterior. Pero también poseo aptitudes en otros rubros que se mencionarán en el apartado correpondiente
-        </p>
-        <p>A través de este sitio podrás conocer un poco más de mi trayectoria, habilidades, proyectos y objetivos, así como el acceso a mi Currículum Vitae actualizado con cada cambio en mi experiencia laboral.</p>
-        <p>Espero que este espacio te resulte interesante y te invite a explorar cada una de sus secciones.</p>
-
-        
     </header>
 
-    <section class="content sau">
-        <h2 class="tittle">Universidad</h2>
-        <p>Estoy estudiando actualmente en la UCSP en la ciudad de Arequipa, en la carrera de Administración de Negocios.</p>
-        <a href="https://ucsp.edu.pe/carreras/administracion-negocios/" class="btn">Más</a>
+    <main>
+        <section id="inicio" class="content header">
+            <h2 class="title">Inicio</h2>
+            <p>
+                Bienvenidos a mi espacio personal. Soy una estudiante universitaria del rubro de administración de negocios cuya aspiración es especializarse en el rubro del comercio exterior. Pero también poseo aptitudes en otros rubros que se mencionarán en el apartado correpondiente.
+            </p>
+            <p>
+                Este espacio tiene el propósito de compartir quién soy, mis intereses y las experiencias que reflejan mi crecimiento personal y profesional. A través de este sitio podrás conocer un poco más de mi trayectoria, habilidades, proyectos y objetivos, así como el acceso a mi Currículum Vitae actualizado con cada cambio en mi experiencia laboral.
+            </p>
+            <p>
+                Espero que este espacio te resulte interesante y te invite a explorar cada una de sus secciones.
+            </p>
+            <a href="#sobre-mi" class="btn">Más</a>
+        </section>
 
-        <!-- Menu de perfiles -->
-        <div class="profile-menu">
-            <h2 class="tittle">Compañeros de Clase</h2>
-            <div id="profiles" class="profiles"></div>
+        <section id="sobre-mi" class="content sau">
+            <h2 class="title">Universidad</h2>
+            <p>
+                Estoy estudiando actualmente en la UCSP en la ciudad de Arequipa, en la carrera de administración de negocios
+            </p>
+            <a href="https://ucsp.edu.pe/carreras/administracion-negocios/" class="btn" target="_blank">Más</a>
+        </section>
+
+        <section class="content">
+            <h2 class="title">Compañeros de Clase</h2>
+            <div id="perfiles" class="box-container"></div>
             <div class="pagination" id="pagination"></div>
-        </div>
-    </section>
+        </section>
 
-    <section class="content price">
-        <article class="contain">
-            <h2 class="title">Currículum</h2>
-            <p>Se puede visualizar mi experiencia en el enlace a continuación, junto a muchas habilidades que he desarrollado y perfeccionado al unirme al mundo laboral. También se complementa ésta informacion con lo detallado en mi perfil de LinkedIn que se encuentra al final de este sitio.</p>
-            <a href="https://www.canva.com/design/DAGoOdCRPiU/N6Itph4xpu0uNS_whsWQgg/edit?utm_content=DAGoOdCRPiU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn">Ver Detalle</a>
-        </article>
-    </section>
+        <section id="curriculum" class="content price">
+            <article class="contain">
+                <h2 class="title">Currículum</h2>
+                <p>
+                    Se puede visualizar mi experiencia en el enlace a continuación, junto a muchas habilidades que he desarrollado y perfeccionado al unirme al mundo laboral. También se complementa esta información con lo detallado en mi perfil de LinkedIn que se encuentra al final de este sitio.
+                </p>
+                <a href="https://www.canva.com/design/DAGoOdCRPiU/N6Itph4xpu0uNS_whsWQgg/edit?utm_content=DAGoOdCRPiU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn" target="_blank">Ver Detalle</a>
+            </article>
+        </section>
 
-    <section class="content about">
-        <h2 class="tittle">Mi Contenido</h2>
-        <p>Aqui encontrarás contenido relacionado a la literatura, sean reseñas o libros escritos. Éste es uno de mis pasatiempos favoritos, al cual le suelo dar mas importancia y seriedad. Ninguno esta registrado bajo mi nombre, Brenda Rojas, sino que utilizo un pseudónimo.</p>
-        <div class="box-container2">
-            <div class="box">
-                <li><a href="https://berenice-rodriguez-books.blogspot.com/" target="_blank">Blogger</a> - Aquí se puede encontrar el historial de libros que ya he leido y a los cuales he podido dar reseña, tambien se habla de mis historias en el perfil a continuación.</li>
-                <li><a href="https://www.wattpad.com/user/Berenice_Rodriguez" target="_blank">Wattpad</a> - Aquí podrás encontrar historias, ya sean cuentos o novelas escritas por mi. Mi aspiración en poder lograr publicar alguna de ellas bajo un sello editorial</li>
+        <section id="contenido" class="content about">
+            <h2 class="title">Mi Contenido</h2>
+            <p>
+                Aquí encontrarás contenido relacionado a la literatura, sean reseñas o libros escritos. Este es uno de mis pasatiempos favoritos, al cual le suelo dar más importancia y seriedad.
+            </p>
+            <div class="box-container2">
+                <div class="box">
+                    <ul>
+                        <li><a href="https://berenice-rodriguez-books.blogspot.com/" target="_blank">Blogger</a> - Aquí se puede encontrar el historial de libros que ya he leído y a los cuales he podido dar reseña, también se habla de mis historias en el perfil a continuación.</li>
+                        <li><a href="https://www.wattpad.com/user/Berenice_Rodriguez" target="_blank">Wattpad</a> - Aquí podrás encontrar historias, ya sean cuentos o novelas escritas por mí. Mi aspiración es poder lograr publicar alguna de ellas bajo un sello editorial.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="content contact">
-        <h2 class="tittle">Redes Sociales</h2>
-        <div class="footer-section">
-            <div class="f-enlaces">
-                <a href="https://www.linkedin.com/in/brenda-berenice-rojas-rodr%C3%ADguez-797b07276/" target="_blank">LinkedIn</a> - Brenda Berenice Rojas Rodriguez</li>
-                <a href="https://www.instagram.com/bere_ro7/" target="_blank">Instagram</a> - Berenice Rojas</li>
-                <a href="https://t.me/Nicerod07/" target="_blank">Telegram</a> - Brenda Berenice Rojas Rodriguez</li>
+        <section id="redes" class="content contact">
+            <h2 class="title">Redes Sociales</h2>
+            <div class="footer-section">
+                <div class="f-enlaces">
+                    <a href="https://www.linkedin.com/in/brenda-berenice-rojas-rodr%C3%ADguez-797b07276/" target="_blank">LinkedIn</a> - Perfil de trabajo
+                    <a href="https://www.instagram.com/bere_ro7/" target="_blank">Instagram</a> - Contacto directo
+                    <a href="https://t.me/Nicerod07/" target="_blank">Telegram</a> - Contacto personal
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script>
-        const perfiles = [
-    { nombre: "Ana Mendoza", linkedin: "https://linkedin.com/in/anamendoza", web: "https://anamendoza.dev" },
-    { nombre: "Luis Paredes", linkedin: "https://linkedin.com/in/luisparedes", web: "" },
-    { nombre: "Camila Ríos", linkedin: "https://linkedin.com/in/camilarios", web: "https://camilarios.com" },
-];
+    const perfiles = [
+        { nombre: "Ernesto Cuadros", linkedin: "https://www.linkedin.com/in/ecuadrosv/", web: "" },
+        { nombre: "Josue Montenegro Salazar", linkedin: "", web: "https://josuemontenegro.com/" },
+        { nombre: "Jesús Franklin Hilarión Gallegos", linkedin: "https://www.linkedin.com/in/franklin-hilari%C3%B3n/", web: "https://franklinhilarion.github.io/franklinhilarion/" },
+        { nombre: "María Fernanda Apaza Meza", linkedin: "", web: "https://mariafernandaapazameza.github.io/Maria-Fernanda-Apaza-Meza/" },
+        { nombre: "María Alesandra Quinto Gonza", linkedin: "https://pe.linkedin.com/in/mar%C3%ADa-a-quinto-g-7920b3358", web: "https://mariaquintog.github.io/" },
+        { nombre: "Joaquin Carlos Huamani Arroyo", linkedin: "https://www.linkedin.com/in/joaquin-carlos-huamani-arroyo-409088358/", web: "https://joaquin200712.github.io/" },
+        { nombre: "Krislet Yahaira Juarez Arce", linkedin: "", web: "https://krisletyahairajuarezarce.github.io/Krislet-Yahaira-Juarez-Arce/" },
+        { nombre: "Alvaro Enrique Apaza Luque", linkedin: "", web: "https://alvaroenriqueapazaluque.github.io/AlvaroApazaLuque.github.io/" },
+        { nombre: "Thirza Alexka Cansaya Escobedo", linkedin: "", web: "" },
+        { nombre: "Carlos Josué Quispe Huscca", linkedin: "", web: "https://jermame15.github.io/carlos_josue_quispe.github.com/" },
+        { nombre: "Melany Paola Delgado Cama", linkedin: "", web: "https://melanydelca.github.io/" },
+        { nombre: "Fabian Rodrigo Cayo Calcina", linkedin: "", web: "https://fabianrodrigocayocalcina.github.io/" },
+        { nombre: "Leonardo Guillermo Cruz Mamani", linkedin: "https://www.linkedin.com/in/leonardo-cruz-mamani-a6888418b/", web: "https://leonardocruzmamani28.github.io/" },
+        { nombre: "Pedro Fabian Zahir Flores Gutierrez", linkedin: "https://www.linkedin.com/in/pedro-f-z-flores-guti%C3%A9rrez-415753365/", web: "https://pedro191102.github.io/Pedro-Fabian-Zahir-Flores-Gutierrez/" },
+        { nombre: "Leyla Diney Rosas Ccama", linkedin: "https://www.linkedin.com/in/leyla-diney-rosas-ccama-872415369", web: "https://leylarosas.github.io/Leyla-Rosas-P-ginaWeb/" },
+        { nombre: "Gustavo Jesus Montoya Durand", linkedin: "", web: "https://gustavojesusmontoyadurand.github.io/Gustavo-Jesus-Montoya-Durand/" },
+        { nombre: "Brad Caleb López Parizaca", linkedin: "", web: "https://caleb19-666.github.io/pagina-shrek/" },
+        { nombre: "Gabriel Guiilermo Vargas Toledo", linkedin: "", web: "" },
+        { nombre: "Gabriel Maura Martinez", linkedin: "", web: "https://gabomaura.neocities.org/" },
+        { nombre: "Arianna Aylin Arenas Zevallos", linkedin: "https://linkedin.com/in/arianna-aylin-arenas-zevallos-15a203357", web: "https://ariannaarenas.github.io/ariannaaylinarenaszevallos/" },
+        { nombre: "Maria Jose Montoya Cardenas", linkedin: "", web: "https://maria-035.github.io/maria.montoya.cardenas-/" },
+        { nombre: "Assli Laura Calizaya Bejar", linkedin: "", web: "" },
+        { nombre: "Joseph Christian Condori Ramos", linkedin: "https://www.linkedin.com/in/joseph-christian-condori-ramos-236645210", web: "" },
+        { nombre: "Blanca Yamilet Gutierrez Llave", linkedin: "", web: "https://blancayamilet1.github.io/Blanca-Yamilet-Gutierrez-Llave/" },
+        { nombre: "Jennifer Eliana Checya Soncco", linkedin: "", web: "https://jenniferelianachecya1.github.io/Jennifer-Eliana-Checya-Soncco/" },
+        { nombre: "Flor de Rosario Álvarez Costilla", linkedin: "", web: "https://flrosario.github.io/PaginaWeb/" },
+        { nombre: "Thalia Esther Torres Banda", linkedin: "", web: "https://essie-torres.github.io/mi-sitio-web/" },
+        { nombre: "José Alejandro Valdivia Juarez", linkedin: "https://pe.linkedin.com/in/jos%C3%A9-valdivia-ju%C3%A1rez-b60b08357", web: "https://jano2112.github.io/Jose-Alejandro-Valdivia-Juarez/" },
+        { nombre: "Tania Yurnet Chuctaya Cjuno", linkedin: "", web: "https://taniayurn.github.io/Tania-Yurnet-Chuctaya-Cjuno/" },
+        { nombre: "Luis Ronaldo Gutierrez Collanqui", linkedin: "", web: "https://ronalx7.github.io/#" },
+        { nombre: "Romina Andrea Llanos Campos", linkedin: "https://www.linkedin.com/in/romina-llanos-campos-73983b340", web: "https://github.com/rominallanos" },
+        { nombre: "Maysha Micaela Torres Coasaca", linkedin: "https://www.linkedin.com/in/maysha-micaela-torres-coasaca-178508359/", web: "https://github.com/MicaelaT0RRES" },
+        { nombre: "Piero Polar Salazar", linkedin: "https://pe.linkedin.com/in/piero-polar-salazar-7807b0357", web: "https://crimsonkiller18.github.io/Piero-Polar-Salazar/" },
+        { nombre: "Lourdes Camila Pinto Astoquilca", linkedin: "", web: "https://lourdespinto.github.io/Lourdes-Camila-Pinto-Astoquilca/" },
+        { nombre: "Mharco Jacob II Paricahua Akutak", linkedin: "https://www.linkedin.com/in/mharco-jacob-ii-paricahua-akutak-2202a4259/", web: "https://mparicahua.github.io/mharcoParicahua.github.io/" },
+        { nombre: "Brenda Berenice Rojas Rodríguez", linkedin: "https://pe.linkedin.com/in/brenda-berenice-rojas-rodr%C3%ADguez-797b07276", web: "https://brenda-berenice-rojas-rodriguez.github.io/brendaberenicerojasrodriguez/" },
+        { nombre: "Christopher Steve Ramirez Pacora", linkedin: "", web: "https://christopher110011.github.io/mipagina/" },
+        { nombre: "Nicole Brigitte Rodriguez Alvarez", linkedin: "https://www.linkedin.com/in/nicole-rodriguez-alvarez-7438a22b1", web: "https://nicole131102.github.io/Mi-pagina-web/" }
+    ];
 
-        for (let i = 1; i <= 96; i++) {
-            profiles.push({
-                nombre: `Compañero ${i}`,
-                web: `https://ejemplo.com/comp${i}`,
-                linkedin: `https://linkedin.com/in/comp${i}`
-            });
+    const perfilesPorPagina = 12;
+    let paginaActual = 1;
+    const totalPaginas = Math.ceil(perfiles.length / perfilesPorPagina);
+
+    function mostrarPerfiles(pagina) {
+        const contenedor = document.getElementById("perfiles");
+        contenedor.innerHTML = "";
+        const inicio = (pagina - 1) * perfilesPorPagina;
+        const fin = inicio + perfilesPorPagina;
+        const paginaPerfiles = perfiles.slice(inicio, fin);
+
+        paginaPerfiles.forEach(perfil => {
+            const box = document.createElement("div");
+            box.className = "box";
+            box.innerHTML = `
+                <h3>${perfil.nombre}</h3>
+                ${perfil.linkedin ? `<p><a href="${perfil.linkedin}" target="_blank">LinkedIn</a></p>` : ""}
+                ${perfil.web ? `<p><a href="${perfil.web}" target="_blank">Página Web</a></p>` : ""}
+            `;
+            contenedor.appendChild(box);
+        });
+    }
+
+    function crearPaginacion() {
+        const paginacion = document.getElementById("pagination");
+        paginacion.innerHTML = "";
+        for (let i = 1; i <= totalPaginas; i++) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            btn.onclick = () => {
+                paginaActual = i;
+                mostrarPerfiles(paginaActual);
+            };
+            paginacion.appendChild(btn);
         }
+    }
 
-        const profilesPerPage = 12;
-        let currentPage = 1;
+    mostrarPerfiles(paginaActual);
+    crearPaginacion();
+</script>
 
-        function renderProfiles() {
-            const container = document.getElementById('profiles');
-            const pagination = document.getElementById('pagination');
-            container.innerHTML = '';
-            pagination.innerHTML = '';
-
-            const start = (currentPage - 1) * profilesPerPage;
-            const end = start + profilesPerPage;
-            const paginatedProfiles = profiles.slice(start, end);
-
-            paginatedProfiles.forEach(profile => {
-                const div = document.createElement('div');
-                div.className = 'profile-box';
-                div.innerHTML = `
-                    <h3>${profile.nombre}</h3>
-                    <a href="${profile.web}" target="_blank">Página Web</a>
-                    <a href="${profile.linkedin}" target="_blank">LinkedIn</a>
-                `;
-                container.appendChild(div);
-            });
-
-            for (let i = 1; i <= 8; i++) {
-                const btn = document.createElement('button');
-                btn.textContent = i;
-                btn.onclick = () => {
-                    currentPage = i;
-                    renderProfiles();
-                };
-                pagination.appendChild(btn);
-            }
-        }
-
-        renderProfiles();
-    </script>
 </body>
 </html>
